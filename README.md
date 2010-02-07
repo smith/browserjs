@@ -1,7 +1,7 @@
 browserjs
 =========
 
-BrowserJS is a ServerJS compatible package that emulates portions of the browser JavaScript APIs.
+BrowserJS is a CommonJS compatible package that emulates portions of the browser JavaScript APIs.
 
 Supported APIs
 --------------
@@ -14,10 +14,10 @@ Supported APIs
 Usage
 -----
 
-To get access to individual APIs, require the corresponding module. For example, if you just w
+To get access to individual APIs, require the corresponding module. For example, if you just want XMLHttpRequest:
 
     var XMLHttpRequest = require("browser/xhr").XMLHttpRequest;
-    
+
 To get the "window" object, which contains all the APIs, require the "browser/window" module:
 
     var window = require("browser/window");
@@ -25,7 +25,7 @@ To get the "window" object, which contains all the APIs, require the "browser/wi
 Use the properties of the window object directly:
 
     var request = new window.XMLHttpRequest();
-    
+
 Or you can bring all the properties of the "window" object into scope temporarily (without modifying the global scope) by using a with statement:
 
     with (window) {
